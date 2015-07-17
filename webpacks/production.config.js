@@ -16,7 +16,8 @@ module.exports = {
       {test: /\.js$/, exclude: /node_modules/, loaders: ['react-hot', 'babel-loader']},
       {test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader")},
       {test: /\.less$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader!less-loader")},
-      {test: /\.(woff|svg|ttf|eot)([\?]?.*)$/, loader: "file-loader?name=[name].[ext]"}
+      {test: /\.(woff|svg|ttf|eot)([\?]?.*)$/, loader: "file-loader?name=[name].[ext]"},
+      {test: /\.json$/,loader: 'json-loader'}
     ]
   },
   plugins: [

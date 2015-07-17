@@ -1,17 +1,17 @@
 import React from 'react';
 
-import WelcomeActions from 'actions/welcome';
-import WelcomeStore from 'stores/welcome';
+import DataActions from 'actions/data';
+import DataStore from 'stores/data';
 
 class Welcome extends React.Component {
 
 	constructor(props) {
 		super(props);
-		this.state = WelcomeStore.getState();
+		this.state = DataStore.getState();
 	}
 
 	componentWillMount() {
-		WelcomeStore.listen(() => {
+		DataStore.listen(() => {
 			this.setState(WelcomeStore.getState());
 		});
 	}

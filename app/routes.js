@@ -5,7 +5,7 @@ import App from 'components/App';
 
 let routes = (
   <Route name="app" path="/" handler={App}>
-    <DefaultRoute handler={require('components/home')} />
+    <DefaultRoute handler={require('components/profile')} />
     <Route name="welcome" handler={require('components/welcome')} />
   </Route>
 )

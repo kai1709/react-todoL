@@ -4,7 +4,6 @@ var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  devtool: 'source-map',
   watch: true,
   entry: {
     main: ['webpack/hot/only-dev-server', __dirname + '/../app/main.js']
@@ -19,7 +18,8 @@ module.exports = {
       {test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader")},
       {test: /\.less$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader!less-loader")},
       {test: /\.(png|jpg)$/, loader: 'url-loader?name=images/[name].[ext]&limit=8192'},
-      {test: /\.(woff|svg|ttf|eot)([\?]?.*)$/, loader: "file-loader?name=fonts/[name].[ext]"}
+      {test: /\.(woff|svg|ttf|eot)([\?]?.*)$/, loader: "file-loader?name=fonts/[name].[ext]"},
+      {test: /\.json$/,loader: 'json'}
     ]
   },
   plugins: [
