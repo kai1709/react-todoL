@@ -1,0 +1,24 @@
+a = [ {"a" : ["1","2","3"]},{"b": ["4", "5", "6"]}]
+[Object, Object]
+var b = {}; a.forEach(function(i){ b = Object.assign(b, i) })
+undefined
+b
+Object {a: Array[3], b: Array[3]}a: Array[3]0: "1"1: "2"2: "3"length: 3__proto__: Array[0]b: Array[3]__proto__: Object
+JSON.stringify(b)
+"{"a":["1","2","3"],"b":["4","5","6"]}"
+b.a[0]
+"1"
+b.a
+["1", "2", "3"]
+var c = []; for (var i in b){ if (Array.isArray(b[i]) { c = c.concat(b[i] } }
+VM2207:2 Uncaught SyntaxError: Unexpected token {
+    at Object.InjectedScript._evaluateOn (<anonymous>:895:140)
+    at Object.InjectedScript._evaluateAndWrap (<anonymous>:828:34)
+    at Object.InjectedScript.evaluate (<anonymous>:694:21)InjectedScript._evaluateOn @ VM1467:895InjectedScript._evaluateAndWrap @ VM1467:828InjectedScript.evaluate @ VM1467:694
+var c = []; for (var i in b){ if (Array.isArray(b[i])) { c = c.concat(b[i] } }
+VM2208:2 Uncaught SyntaxError: missing ) after argument list
+    at Object.InjectedScript._evaluateOn (<anonymous>:895:140)
+    at Object.InjectedScript._evaluateAndWrap (<anonymous>:828:34)
+    at Object.InjectedScript.evaluate (<anonymous>:694:21)InjectedScript._evaluateOn @ VM1467:895InjectedScript._evaluateAndWrap @ VM1467:828InjectedScript.evaluate @ VM1467:694
+var c = []; for (var i in b){ if (Array.isArray(b[i])) { c = c.concat(b[i]) } }
+["1", "2", "3", "4", "5", "6"]

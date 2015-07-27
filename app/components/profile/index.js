@@ -1,46 +1,51 @@
 import React from 'react';
 import { Link } from 'react-router';
-import DataActions from 'actions/data';
-import DataStore from 'stores/data';
+import StoreActions from 'actions/store';
+import StoreSearch from 'stores/search';
 
-class profile extends React.Component {
+class Profile extends React.Component {
 
 	constructor(props) {
 		super(props);
-		this.state = DataStore.getState();
+		this.state = StoreSearch.getState();
 	}
 
 	componentWillMount() {
-		DataStore.listen(() => {
-			this.setState(WelcomeStore.getState());
+		StoreSearch.listen(() => {
+			this.setState(StoreSearch.getState());
 		});
 	}
 
 
   render() {
 
-  			let data = this.state.data.map((item, index) => {
-					return (<tr key={index} className="trProduct">
-						<td className="imagesProduct"><img src={item.image_link} className="image_link" /></td>
-						<td className="infoProduct">
-										<p>{item.name}</p>
-										<p>{item.author}</p>
-										<p>{item.publisher}</p>
-						</td>
-							<td className="priceProduct"><a>{item.price} đ</a></td>
-							<td className="sellerProduct"><p>Phương Nam</p></td>
-							<td><div className="buttonProduct"><button className="buttondatmua">Đặt Mua</button><p><a href={item.html}>Xem Chi Tiết</a></p></div></td>
-						</tr>
-						);
-						});
+   let data = this.state.dataSearch.map((item, index) => {
+     return (
+        <tr key={index} className="trProduct">
+          <td className="imagesProduct"><img src={item.Image} className="image_link" /></td>
+          <td className="infoProduct">
+            <div className="detailLeft">
+              <div className="something"><h3>Name : {item.Name}</h3></div>
+              <h5>Brand : {item.Trademark}</h5>
+              <h5>OS : {item.OS}</h5>
+            </div>
+            <div className="detailRight">
+
+            </div>
+          </td>
+          <td className="priceProduct"><a> <div className="price">{item.Price}</div></a></td>
+          <td className="sellerProduct"><p></p></td>
+          <td><div className="buttonProduct"><button className="ui inverted green button">Order</button><p><a >Details</a></p></div></td>
+        </tr>
+      );
+   });
 
     return (
       <div>
-        <h1>Welcome!</h1>
-        <table className="tableProduct">{data}</table>
+         <table className="tableProduct"><tr className="trProduct1"><td className="imagesProduct"></td><td className="infoProduct"></td><td className="priceProduct"></td><td className="sellerProduct"></td></tr>{data}</table>
       </div>
     );
   }
 };
 
-export default profile;
+export default Profile;

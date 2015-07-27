@@ -1,5 +1,6 @@
 import 'babel-core/polyfill';
 import 'assets/styles.css';
+import 'semantic-ui/dist/semantic.min.css';
 
 import Router from 'react-router';
 import React from 'react';

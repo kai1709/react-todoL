@@ -2,14 +2,18 @@
   box-sizing: border-box;
 }
 
-body {
+.wrapper {
   margin: 0;
   height: 100vh;
+  width: 100%;
+  background-color:#b7e9f2;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
 }
 .imagesProduct{
 	width: 120px;
 	height: 120px;
-	background: #FFFFFF;
 	float:left;
 }
 .divProduct{
@@ -25,7 +29,7 @@ body {
 p{
 	margin-top: 10px;
 }
-.priceProduct{
+.priceProduct {
 	margin-top: 10px;
 	float:left;
 	width: 100px;
@@ -51,4 +55,125 @@ p{
 }
 
 tr {
+}
+.searchBar
+{
+	font-family: Arial;
+	font-size: 30px;
+  font-style: bold;
+	color: #540000;
+	padding: 100px 0 20px 0;
+}
+.bar
+{
+
+}
+.filterList
+{
+	float: left;
+	border: 2px;
+	text-align: left;
+}
+.listProduct
+{
+	float: left;
+	text-align: left;
+	margin-left: 100px;
+
+}
+.searchField
+{
+	padding: 20px;
+}
+.detailLeft
+{
+	float: left;
+	font-family: Arial;
+	color: #6c7b8b;
+}
+.detailRight
+{
+	float: left;
+	font-family: Arial;
+	color:green;
+}
+
+img:hover {
+    opacity: 1.0;
+    filter: alpha(opacity = 100);
+    border-image: solid;
+}
+.filter
+{
+	font-family: Arial;
+	font-size: 30px;
+	font-weight: bold;
+	padding: 20px;
+}
+.searchBoxOpacity
+{
+	opacity: 0.4;
+}
+.something
+{
+	color: #336699;
+}
+.price
+{
+	font-family: Arial;
+	font-size: 20px;
+	color: #ff2626;
+}
+.listOptionTitle
+{
+  font-size: 20px;
+  font-family: Arial;
+  font-weight: bold;
+  color: #5e5e5e;
+  padding-top: 20px;
+  padding-left: 50px;
+  padding-bottom: 10px;
+
+}
+.listOption
+{
+  padding-left: 100px;
+
+  font-family: Arial;
+  font-size: 15px;
+  color : grey;
+}
+.inputSearch
+{
+  width: 600px;
+  opacity: 0.8;
+  color: #ffc0cb;
+
+}
+.backgroundSearch
+{
+  background-color: red;
+  color:red;
+}
+.infoProduct1{
+  margin-left: 20px;
+  width: 400px;
+  margin-top: 0;
+  line-height: 1;
+  float:left;
+}
+
+.priceProduct1{
+  margin-top: 10px;
+  float:left;
+  width: 100px;
+}
+.sellerProduct1{
+  float:left;
+  width: 150px;
+  vertical-align: top;
+}
+.trProduct1{
+  height: 10px;
+
 }
