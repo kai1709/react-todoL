@@ -1,0 +1,632 @@
+{
+  "autocomplete": [
+    {
+    "Name":"Samsung Galaxy Grand Prime G530",
+    "Access":6900
+    },
+    {
+    "Name":"Nokia 105",
+    "Access":5400
+    },
+    {
+    "Name":"Samsung Galaxy J1",
+    "Access":4200
+    },
+    {
+    "Name":"OPPO Neo 5",
+    "Access":3500
+    },
+    {
+    "Name":"Samsung Galaxy Core Prime",
+    "Access":3200
+    },
+    {
+    "Name":"Samsung Galaxy E5",
+    "Access":2700
+    },
+    {
+    "Name":"Nokia 225",
+    "Access":2700
+    },
+    {
+    "Name":"Sony Xperia M4 Aqua Dual",
+    "Access":2600
+    },
+    {
+    "Name":"Nokia Lumia 730 Dual SIM",
+    "Access":2500
+    },
+    {
+    "Name":"Samsung Galaxy V plus",
+    "Access":2500
+    },
+    {
+    "Name":"Q-Mobile Lim P01",
+    "Access":2500
+    },
+    {
+    "Name":"Nokia 215 Dual Sim",
+    "Access":2400
+    },
+    {
+    "Name":"Mobiistar Touch Bean 402C",
+    "Access":2300
+    },
+    {
+    "Name":"Q-Mobile C350",
+    "Access":2300
+    },
+    {
+    "Name":"iPhone 4S 8GB",
+    "Access":2200
+    },
+    {
+    "Name":"Nokia 106",
+    "Access":2100
+    },
+    {
+    "Name":"Mobiistar B209",
+    "Access":2100
+    },
+    {
+    "Name":"Q-Mobile Q168",
+    "Access":2100
+    },
+    {
+    "Name":"Nokia 130",
+    "Access":2000
+    },
+    {
+    "Name":"Mobiistar LAI Z",
+    "Access":1800
+    },
+    {
+    "Name":"Microsoft Lumia 540",
+    "Access":1700
+    },
+    {
+    "Name":"OPPO Joy 3",
+    "Access":1700
+    },
+    {
+    "Name":"Lenovo A7000",
+    "Access":1600
+    },
+    {
+    "Name":"Microsoft Lumia 535",
+    "Access":1600
+    },
+    {
+    "Name":"Nokia 220",
+    "Access":1600
+    },
+    {
+    "Name":"Samsung E1200",
+    "Access":1600
+    },
+    {
+    "Name":"Microsoft Lumia 430",
+    "Access":1500
+    },
+    {
+    "Name":"Mobiistar B233",
+    "Access":1500
+    },
+    {
+    "Name":"Asus Zenfone 2 1.8Ghz/2G/16G ZE550ML",
+    "Access":1400
+    },
+    {
+    "Name":"Microsoft Lumia 640",
+    "Access":1200
+    },
+    {
+    "Name":"Nokia 108 (Không kèm thẻ nhớ)",
+    "Access":1100
+    },
+    {
+    "Name":"Samsung Galaxy A5",
+    "Access":1000
+    },
+    {
+    "Name":"HTC One E8 Dual",
+    "Access":1000
+    },
+    {
+    "Name":"Asus Zenfone C",
+    "Access":1000
+    },
+    {
+    "Name":"Nokia 105 Dual SIM",
+    "Access":1000
+    },
+    {
+    "Name":"Asus Zenfone 5 (CPU-1.2GHz)",
+    "Access":900
+    },
+    {
+    "Name":"Sony Xperia E4 Dual",
+    "Access":900
+    },
+    {
+    "Name":"Asus Zenfone C Plus",
+    "Access":900
+    },
+    {
+    "Name":"OPPO Joy",
+    "Access":900
+    },
+    {
+    "Name":"iPhone 6 16GB",
+    "Access":800
+    },
+    {
+    "Name":"Sony Xperia C4 Dual",
+    "Access":800
+    },
+    {
+    "Name":"Lenovo A5000",
+    "Access":800
+    },
+    {
+    "Name":"Q-Smart QS558",
+    "Access":800
+    },
+    {
+    "Name":"Samsung Galaxy E7",
+    "Access":600
+    },
+    {
+    "Name":"OPPO R1K R8001",
+    "Access":600
+    },
+    {
+    "Name":"Microsoft Lumia 640 XL",
+    "Access":600
+    },
+    {
+    "Name":"LG L60",
+    "Access":600
+    },
+    {
+    "Name":"iPhone 5S 16GB",
+    "Access":500
+    },
+    {
+    "Name":"Samsung Galaxy A7",
+    "Access":500
+    },
+    {
+    "Name":"Samsung Galaxy A3",
+    "Access":500
+    },
+    {
+    "Name":"HTC Desire 616",
+    "Access":400
+    },
+    {
+    "Name":"Mobiistar LAI 504c",
+    "Access":400
+    },
+    {
+    "Name":"Lenovo A319",
+    "Access":400
+    },
+    {
+    "Name":"OPPO R5",
+    "Access":300
+    },
+    {
+    "Name":"OPPO Find 5 Mini R827 8GB",
+    "Access":300
+    },
+    {
+    "Name":"Asus Zenfone 2 ZE500CL",
+    "Access":300
+    },
+    {
+    "Name":"Nokia 515",
+    "Access":300
+    },
+    {
+    "Name":"Mobiistar LAI Y",
+    "Access":300
+    },
+    {
+    "Name":"HTC Desire 326G",
+    "Access":300
+    },
+    {
+    "Name":"OPPO Joy Plus R1011",
+    "Access":300
+    },
+    {
+    "Name":"Lenovo A536",
+    "Access":300
+    },
+    {
+    "Name":"Microsoft Lumia 532",
+    "Access":300
+    },
+    {
+    "Name":"Philips S388",
+    "Access":300
+    },
+    {
+    "Name":"Philips E180",
+    "Access":300
+    },
+    {
+    "Name":"Philips E101",
+    "Access":300
+    },
+    {
+    "Name":"iPhone 6 Plus 64GB",
+    "Access":200
+    },
+    {
+    "Name":"iPhone 6 Plus 16GB",
+    "Access":200
+    },
+    {
+    "Name":"Samsung Galaxy S6 32GB",
+    "Access":200
+    },
+    {
+    "Name":"Asus Zenfone 2 2.3Ghz/4G/32G",
+    "Access":200
+    },
+    {
+    "Name":"Lenovo P70",
+    "Access":200
+    },
+    {
+    "Name":"LG Magna",
+    "Access":200
+    },
+    {
+    "Name":"Philips S398",
+    "Access":200
+    },
+    {
+    "Name":"Lenovo A6000",
+    "Access":200
+    },
+    {
+    "Name":"Nokia Lumia 630",
+    "Access":200
+    },
+    {
+    "Name":"Philips W3500",
+    "Access":200
+    },
+    {
+    "Name":"Lenovo A328",
+    "Access":200
+    },
+    {
+    "Name":"Wiko Bloom",
+    "Access":200
+    },
+    {
+    "Name":"Microsoft Lumia 435",
+    "Access":200
+    },
+    {
+    "Name":"Q-Smart Dream W473",
+    "Access":200
+    },
+    {
+    "Name":"Philips E310",
+    "Access":200
+    },
+    {
+    "Name":"Nokia 108",
+    "Access":200
+    },
+    {
+    "Name":"Philips E130",
+    "Access":200
+    },
+    {
+    "Name":"Samsung Galaxy Note Edge",
+    "Access":100
+    },
+    {
+    "Name":"Samsung Galaxy S6 Edge 64GB",
+    "Access":100
+    },
+    {
+    "Name":"Samsung Galaxy S6 Edge 32GB",
+    "Access":100
+    },
+    {
+    "Name":"iPhone 6 64GB",
+    "Access":100
+    },
+    {
+    "Name":"Sony Xperia Z3 Plus",
+    "Access":100
+    },
+    {
+    "Name":"LG G4 Metallic/Ceramic",
+    "Access":100
+    },
+    {
+    "Name":"HTC One M9",
+    "Access":100
+    },
+    {
+    "Name":"Samsung Galaxy Note 4",
+    "Access":100
+    },
+    {
+    "Name":"LG G4 Leather",
+    "Access":100
+    },
+    {
+    "Name":"Sony Xperia Z3 Compact",
+    "Access":100
+    },
+    {
+    "Name":"Sony Xperia Z3",
+    "Access":100
+    },
+    {
+    "Name":"Sony Xperia Z2",
+    "Access":100
+    },
+    {
+    "Name":"Nokia Lumia 930",
+    "Access":100
+    },
+    {
+    "Name":"HTC Desire Eye",
+    "Access":100
+    },
+    {
+    "Name":"OPPO N1 Mini",
+    "Access":100
+    },
+    {
+    "Name":"HTC Desire 826",
+    "Access":100
+    },
+    {
+    "Name":"Asus Zenfone 2 2.3Ghz/4G/64G",
+    "Access":100
+    },
+    {
+    "Name":"Nokia Lumia 830",
+    "Access":100
+    },
+    {
+    "Name":"Sony Xperia C3",
+    "Access":100
+    },
+    {
+    "Name":"Q GLAM",
+    "Access":100
+    },
+    {
+    "Name":"Wiko Highway Pure",
+    "Access":100
+    },
+    {
+    "Name":"Lenovo S90",
+    "Access":100
+    },
+    {
+    "Name":"Asus Zenfone 6",
+    "Access":100
+    },
+    {
+    "Name":"Asus Zenfone 2 1.8Ghz/2G/32G",
+    "Access":100
+    },
+    {
+    "Name":"LG G3 Stylus",
+    "Access":100
+    },
+    {
+    "Name":"HTC Desire 816G",
+    "Access":100
+    },
+    {
+    "Name":"HTC Desire 626G",
+    "Access":100
+    },
+    {
+    "Name":"Philips i908",
+    "Access":100
+    },
+    {
+    "Name":"HTC Desire 620G",
+    "Access":100
+    },
+    {
+    "Name":"OPPO Find 5 Mini",
+    "Access":100
+    },
+    {
+    "Name":"Gionee Elife S5.1",
+    "Access":100
+    },
+    {
+    "Name":"Mobiistar Prime X",
+    "Access":100
+    },
+    {
+    "Name":"Lenovo S60",
+    "Access":100
+    },
+    {
+    "Name":"Asus Zenfone 5 A501 ROM 16GB",
+    "Access":100
+    },
+    {
+    "Name":"Wiko Ridge Fab 4G",
+    "Access":100
+    },
+    {
+    "Name":"Asus Zenfone 5",
+    "Access":100
+    },
+    {
+    "Name":"Philips V387",
+    "Access":100
+    },
+    {
+    "Name":"OPPO YoYo",
+    "Access":100
+    },
+    {
+    "Name":"Wiko Ridge",
+    "Access":100
+    },
+    {
+    "Name":"Mobiistar Prime Xense",
+    "Access":100
+    },
+    {
+    "Name":"Philips Xenium W6610",
+    "Access":100
+    },
+    {
+    "Name":"HTC Desire 526G",
+    "Access":100
+    },
+    {
+    "Name":"OPPO Neo 3 R831K",
+    "Access":100
+    },
+    {
+    "Name":"Mobiistar Prime 508 Lite",
+    "Access":100
+    },
+    {
+    "Name":"Lenovo S580",
+    "Access":100
+    },
+    {
+    "Name":"Wing P4000",
+    "Access":100
+    },
+    {
+    "Name":"LG L70 Dual",
+    "Access":100
+    },
+    {
+    "Name":"Wiko Rainbow",
+    "Access":100
+    },
+    {
+    "Name":"Samsung Galaxy Core 2",
+    "Access":100
+    },
+    {
+    "Name":"LG L Fino (L70 Plus)",
+    "Access":100
+    },
+    {
+    "Name":"Wing Iris 55",
+    "Access":100
+    },
+    {
+    "Name":"HTC Desire 320",
+    "Access":100
+    },
+    {
+    "Name":"Lenovo A859",
+    "Access":100
+    },
+    {
+    "Name":"Nokia XL",
+    "Access":100
+    },
+    {
+    "Name":"Wing Iris 50",
+    "Access":100
+    },
+    {
+    "Name":"Gionee V4S",
+    "Access":100
+    },
+    {
+    "Name":"Mobiistar LAI 504K",
+    "Access":100
+    },
+    {
+    "Name":"Q-Smart S29",
+    "Access":100
+    },
+    {
+    "Name":"Nokia Lumia 530",
+    "Access":100
+    },
+    {
+    "Name":"Bavapen B522",
+    "Access":100
+    },
+    {
+    "Name":"Mobiistar Lai 504M",
+    "Access":100
+    },
+    {
+    "Name":"Nokia X2",
+    "Access":100
+    },
+    {
+    "Name":"Samsung Galaxy V",
+    "Access":100
+    },
+    {
+    "Name":"Philips S308",
+    "Access":100
+    },
+    {
+    "Name":"Philips S309",
+    "Access":100
+    },
+    {
+    "Name":"Wing V45",
+    "Access":100
+    },
+    {
+    "Name":"Q-Smart QS17",
+    "Access":100
+    },
+    {
+    "Name":"Philips E311",
+    "Access":100
+    },
+    {
+    "Name":"Wing Hero 40",
+    "Access":100
+    },
+    {
+    "Name":"Samsung Yucca",
+    "Access":100
+    },
+    {
+    "Name":"Philips E160",
+    "Access":100
+    },
+    {
+    "Name":"Samsung Brio",
+    "Access":100
+    },
+    {
+    "Name":"Bavapen B42",
+    "Access":100
+    },
+    {
+    "Name":"Bavapen B40",
+    "Access":100
+    },
+    {
+    "Name":"Bavapen B20",
+    "Access":100
+    }
+  ]
+}

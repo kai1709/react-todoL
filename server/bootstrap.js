@@ -8,7 +8,7 @@ let app = express();
 // bundled JS available as well as our template
 // app.set('view engine', 'html');
 // app.set('views', path.join(__dirname, 'views'));
-app.use('/', express.static(path.join(__dirname, '../', 'dist')));
+app.use('/assets', express.static(path.join(__dirname, '../', 'dist')));
 
 // Routes
 app.get('*', function(req, res) {

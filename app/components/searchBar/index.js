@@ -3,28 +3,31 @@ import React from 'react';
 import { Link } from 'react-router';
 import StoreActions from 'actions/store';
 import Profile from 'components/profile';
-
-// import { Combobox } from 'react-autocomplete';
-
+import { Combobox } from 'react-pick';
+import SearchUsecase from 'usecases/search';
+import Tabs from 'components/tabs';
 class SearchBar extends React.Component {
 	constructor (props) {
 		super(props);
-		this.state = Object.assign(StoreSearch.getState(), {showHint: false});
+		this.state = Object.assign({value: ""}, StoreSearch.getState());
+				StoreActions.getNameAutoComplete();
 	}
 	componentWillMount ()	{
 		StoreSearch.listen (() => {
 			this.setState(StoreSearch.getState());
-			console.log('currentFilters', StoreSearch.getState().currentFilters);
+			console.log('StoreSearch', StoreSearch.getState());
 		});
 	}
 	updateSearchMess (e){
-		let searchMess = this.refs['searchfield'].getDOMNode().value.trim();
-		if (!searchMess.length)
-		{
-			alert('Error');
+		// let searchMess = this.refs['searchfield'].getDOMNode().value.trim();
+		let searchMess = this.state.value.trim();
+		if (!searchMess.length) {
+			alert('Please input something ');
 			return;
 		}
-		this.refs['searchfield'].getDOMNode().value = '';
+		console.log('searchMess',searchMess);
+
+    SearchUsecase.searchProducts({ category : this.state.stage, $name : searchMess});
 		StoreActions.storeSearch(searchMess);
 		StoreActions.searchBrand(searchMess);
 	}
@@ -35,19 +38,27 @@ class SearchBar extends React.Component {
 			this.updateSearchMess();
 			return;
 		}
-		else if (event.keyCode === 27)
-		{
-			this.refs['searchfield'].getDOMNode().value ='';
-		}
 	}
 	_onChanngeCheckbox(options, checked) {
-		// event.preventDefault();
-		/*console.log(event.target.checked);
-		console.log(options)*/
 		console.log(options, checked);
-		StoreActions.filterFeature(options, checked);
-		StoreActions.displayFilterData();
+		StoreActions.displayFilterData(options, checked);
 	}
+
+	capitalize (value) {
+		return value.charAt(0).toUpperCase() + value.slice(1);
+	}
+	getOptionsForInputValue(inputValue) {
+		inputValue = this.capitalize(inputValue);
+		this.setState({value: inputValue});
+    return new Promise((resolve, reject) => {
+      resolve(
+        this.state.nameAutoComplete.filter((person) => person.indexOf(inputValue) === 0)
+        );
+    });
+  }
+  handleChange(newValue) {
+  	this.setState({value: newValue});
+  }
 	render() {
 		let existed = this.state.lol;
 		// console.log(this.state.currentFilters);
@@ -85,13 +96,13 @@ class SearchBar extends React.Component {
 					<div className="ui search">
 						<div className="ui input">
 							<div className ="ui right icon input loading">
-								<input autoFocus={true} className="inputSearch" placeholder="Search what you want here..." ref='searchfield' onKeyUp={this.pressKey.bind(this)} autoComplete  onFocus={(e) => this.setState({showHint: true})} onBlur={(e) => this.setState({showHint: false})} />
-								<i className="search icon"></i>
+								<Combobox autoFocus={true} className="inputSearch" placeholder="Search what you want here..." onKeyUp={this.pressKey.bind(this)} getOptionsForInputValue={this.getOptionsForInputValue.bind(this)} onChange={this.handleChange.bind(this)} onCancle value={this.state.value} />
+
 							</div>
 						</div>
 					</div>
 				<div className="searchField">
-						<button className="ui inverted red button" onClick={this.updateSearchMess.bind(this)}>SEARCH</button>
+						<button className="ui inverted white button" onClick={this.updateSearchMess.bind(this)}>SEARCH</button>
 					</div>
 				</div>
 				<div className="filterList">
@@ -100,7 +111,7 @@ class SearchBar extends React.Component {
 					</table>
 				</div>
 				<div className="listProduct">
-					{!existed? <div></div>: <div><Profile /></div>}
+					{!existed? <div></div>: <div><Tabs /></div>}
 				</div>
 			</div>
 		);

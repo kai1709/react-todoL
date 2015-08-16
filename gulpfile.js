@@ -59,6 +59,13 @@ var webpackProxy = function () {
   return proxy(options);
 };
 
+// Proxy `/` to the `API` server started
+var apiProxy = function () {
+  var options = url.parse('http://localhost:3001');
+  options.route = '/api';
+  return proxy(options);
+};
+
 // Proxy `/` to the `express` server started
 var expressProxy = function () {
   var options = url.parse('http://localhost:3000');
@@ -69,11 +76,16 @@ var expressProxy = function () {
 // Sync browser for testing
 gulp.task('sync', function () {
   browserSync.init({
+    ui: {
+        port: 4000
+    },
+    open: false,
     port: 8080,
     server: {
       baseDir: __dirname,
       middleware: [
         webpackProxy(),
+        apiProxy(),
         expressProxy()
       ]
     },

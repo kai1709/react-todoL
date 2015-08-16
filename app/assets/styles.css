@@ -1,14 +1,17 @@
 * {
   box-sizing: border-box;
 }
-
+.react-tabs {
+  margin-bottom: 0px;
+}
 .wrapper {
   margin: 0;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   width: 100%;
-  background-color:#b7e9f2;
+  background-color:#0091ff;
   background-position: center center;
-  background-attachment: fixed;
+
   background-size: cover;
 }
 .imagesProduct{
@@ -16,6 +19,7 @@
 	height: 120px;
 	float:left;
 }
+
 .divProduct{
 	position: relative;
 }
@@ -40,6 +44,8 @@ p{
 	vertical-align: top;
 }
 .trProduct{
+  border: 2px solid white;
+  background-color: white;
 	height: 150px;
 }
 .buttonProduct{
@@ -53,15 +59,12 @@ p{
 .buttondatmua{
 	margin-left: 10px;
 }
-
-tr {
-}
 .searchBar
 {
 	font-family: Arial;
 	font-size: 30px;
   font-style: bold;
-	color: #540000;
+	color: white;
 	padding: 100px 0 20px 0;
 }
 .bar
@@ -76,10 +79,14 @@ tr {
 }
 .listProduct
 {
-	float: left;
+	float: center;
 	text-align: left;
 	margin-left: 100px;
 
+}
+.tdWidth
+{
+  width: 50px;
 }
 .searchField
 {
@@ -156,11 +163,12 @@ img:hover {
   color:red;
 }
 .infoProduct1{
-  margin-left: 20px;
+  text-align: center;
   width: 400px;
   margin-top: 0;
   line-height: 1;
   float:left;
+  margin:0;
 }
 
 .priceProduct1{
@@ -174,6 +182,64 @@ img:hover {
   vertical-align: top;
 }
 .trProduct1{
-  height: 10px;
+  height: 30px;
+  padding:0px;
+  background-color: white;
+  text-align: center;
+}
+.InputWithPopup {
+  display: inline-block;
+  position: relative;
+}
+
+.InputWithPopup-input {
+
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.InputWithPopup-popup {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  border: 1px solid #aaa;
+  background: #fff;
+  opacity: :0.5;
+  top: 100%;
+  padding: 5px 0px;
+  max-height: 400px;
+  overflow: auto;
+  font-size: 12px;
+  font-family: sans-serif;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.InputWithPopup-popup--isOpen {
+  display: block;
+}
+
+.List {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.List-option {
+  font-family: Arial;
+  display: block;
+  padding: 0px 16px;
+  background-color:#fff;
+  text-align: left;
+}
+
+.List-option--isFocused {
+  outline: 0;
+  color: red;
+  background: hsl(200, 50%, 50%);
+  cursor: pointer;
 
 }

@@ -1,4 +1,4 @@
-import 'babel-core/polyfill';
+import 'babel/polyfill';
 import 'assets/styles.css';
 import 'semantic-ui/dist/semantic.min.css';
 

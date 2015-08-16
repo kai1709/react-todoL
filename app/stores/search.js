@@ -1,6 +1,7 @@
 import Alt from 'utils/alt';
 import StoreActions from 'actions/store';
-import { data } from './data.json';
+import SearchUseCase from 'usecases/search';
+import { autocomplete } from './AutoComplete.json';
 class StoreSearch {
 	constructor() {
 		this.bindActions(StoreActions);
@@ -17,10 +18,49 @@ class StoreSearch {
       {'key': 'tablet', 'value': ['may tinh bang', 'tablet', 'mtb', 'maytinhbang','may_tinh_bang']}
     ];
     this.lol = false;
-    this.data = data;
+    this.data = {};
     this.dataSearch = [];
     this.filterOptions = [];
+    this.value = '';
+    this.autocomplete = autocomplete;
+    this.nameAutoComplete = [];
+    this.loadingProducts = false;
+    this.stage = 1;
+    this.basket =[];
+    this.productSeen = [];
+    this.boolSeen = false;
+    this.visibleDetail = false;
+    this.visibleBasket = false;
+    this.boolClassVisible = false;
+    this.nameRequest = '';
+    this.brand = '';
 	}
+  getCurrentProd (payload) {
+    this.visibleDetail =true;
+    this.currentProduct = payload;
+    this.boolSeen = this.productSeen.some((prod) => this.prod.Name === payload.Name);
+    if (this.boolSeen === false) {
+      this.productSeen.push(payload);
+    }
+  }
+  updateBasket(payload) {
+    this.visibleBasket = true;
+    console.log('basket',payload);
+    this.basket.push(payload);
+    console.log('this basket', this.basket);
+
+  }
+  showSeen () {
+    this.boolClassVisible =true;
+  }
+  loadingProducts() {
+    this.loadingProducts = true;
+  }
+  receiveProductsList(products) {
+    this.dataSearch = products.data;
+    console.log('asdasdasdasd');
+    console.log('dataSearchStore',this.dataSearch);
+  }
 	storeSearch(searchmess) {
     this.lol = true;
 
@@ -32,11 +72,13 @@ class StoreSearch {
       return existed;
     });
 
+
     if (!found) {
       searchmess = 'all';
     }
     this.currentFilters = this.options[searchmess];
 	}
+
   searchBrand(searchmess) {
     for (let i = 0; i< this.data.length; i++) {
       for(let x in this.data[i]) {
@@ -45,37 +87,50 @@ class StoreSearch {
         }
       }
     }
-
+  }
+  getNameAutoComplete (){
+      for (let i = 0; i < this.autocomplete.length; i++) {
+        this.nameAutoComplete.push(this.autocomplete[i].Name);
+      }
+      console.log(this.nameAutoComplete);
   }
   filterFeature(payload) {
+
+  }
+  displayFilterData(payload) {
     let [option, checked] = payload;
     if (checked) {
-      this.filterOptions.push(option);
-      return;
+      let a = option.toLowerCase();
+      this.filterOptions.push(a);
     }
     else {
       for(let i = 0; i < this.filterOptions.length; i++) {
-        if (option === this.filterOptions[i]) {
-          console.log('i', i );
+        let a = option.toLowerCase();
+        if (a === this.filterOptions[i]) {
           this.filterOptions.splice(i,1);
         }
       }
     }
-  }
-  displayFilterData() {
-    console.log(this.filterOptions);
+    console.log('a',this.filterOptions);
     this.dataSearch = [];
-    for (let i = 0; i < this.filterOptions.length; i++) {
-      for (let x = 0; x < this.data.length; x++) {
-        for (let k in this.data[x]) {
-          if (this.filterOptions[i] === this.data[x][k]) {
-            this.dataSearch.push(this.data[x]);
-          }
-        }
-      }
+    this.nameRequest = '';
+    if (this.filterOptions.length === 1){
+      this.nameRequest = this.filterOptions[0];
+      setTimeout( () => { console.log('kec',this.stage); console.log('kac',this.nameRequest);SearchUseCase.searchProducts({category: this.stage, $brand: this.nameRequest});}, 1);
     }
-    console.log(this.dataSearch.length);
+    else if (this.filterOptions.length === 2)
+    {
+      this.nameRequest = this.filterOptions[0] + '|' + this.filterOptions[1];
+      setTimeout( () => { console.log('kec',this.stage); console.log('kac',this.nameRequest);SearchUseCase.searchProducts({category: this.stage, $brand: this.nameRequest});}, 1);
+
+}    console.log('nameRequest',this.nameRequest);
+    console.log('stage', this.stage);
+
   }
+  changeWelcomeMessage(value){
+    this.value = value;
+  }
+
 }
 export default Alt.createStore(StoreSearch, 'StoreSearch');
 
