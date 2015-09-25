@@ -90,7 +90,7 @@ class SearchBar extends React.Component {
 		return (
 			<div  className="bodyPage" style={{textAlign: 'center'}}>
 				<div className="searchBar">
-						WANNA
+						TOI MUA
 				</div>
 				<div >
 					<div className="ui search">

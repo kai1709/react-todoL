@@ -54,7 +54,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "c44f59bf3f0ed67a0416"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "449391522c11726f23af"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -29023,7 +29023,7 @@
 					_react2['default'].createElement(
 						'div',
 						{ className: 'searchBar' },
-						'WANNA'
+						'TOI MUA'
 					),
 					_react2['default'].createElement(
 						'div',
